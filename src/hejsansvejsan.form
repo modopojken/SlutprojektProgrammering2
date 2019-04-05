@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="hejsansvejsan">
-  <grid id="27dc6" binding="Panelen" layout-manager="GridLayoutManager" row-count="5" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+  <grid id="27dc6" binding="fuskknapp" layout-manager="GridLayoutManager" row-count="9" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
     <margin top="0" left="0" bottom="0" right="0"/>
     <constraints>
       <xy x="20" y="20" width="500" height="400"/>
@@ -16,16 +16,6 @@
           <text value="Exit"/>
         </properties>
       </component>
-      <component id="400cc" class="javax.swing.JTextField" binding="skrivDinGissningHärTextField" default-binding="true">
-        <constraints>
-          <grid row="4" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
-            <preferred-size width="150" height="-1"/>
-          </grid>
-        </constraints>
-        <properties>
-          <text value="Skriv din gissning här"/>
-        </properties>
-      </component>
       <component id="2f575" class="javax.swing.JTextField" binding="gissaOrdetTextField" default-binding="true">
         <constraints>
           <grid row="0" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
@@ -33,6 +23,7 @@
           </grid>
         </constraints>
         <properties>
+          <editable value="false"/>
           <text value="Gissa ordet!"/>
         </properties>
       </component>
@@ -59,7 +50,7 @@
       </grid>
       <component id="5a569" class="javax.swing.JTextArea" binding="spelareSomÄrMedTextArea" default-binding="true">
         <constraints>
-          <grid row="1" column="0" row-span="3" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
+          <grid row="1" column="0" row-span="5" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="50"/>
           </grid>
         </constraints>
@@ -76,7 +67,7 @@
         </constraints>
         <properties>
           <editable value="false"/>
-          <text value="Antal poäng som ges"/>
+          <text value="5"/>
         </properties>
       </component>
       <component id="1000c" class="javax.swing.JTextField" binding="dinaPoängTextField" default-binding="true">
@@ -87,7 +78,7 @@
         </constraints>
         <properties>
           <editable value="false"/>
-          <text value="Dina poäng"/>
+          <text value=""/>
         </properties>
       </component>
       <component id="5e140" class="javax.swing.JTextField" binding="antalLedtrådarUteTextField" default-binding="true">
@@ -103,13 +94,63 @@
       </component>
       <component id="3633e" class="javax.swing.JTextField" binding="rättFelTextField" default-binding="true">
         <constraints>
-          <grid row="4" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+          <grid row="4" column="2" row-span="5" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="-1"/>
           </grid>
         </constraints>
         <properties>
           <editable value="false"/>
           <text value="Rätt / Fel"/>
+        </properties>
+      </component>
+      <component id="400cc" class="javax.swing.JTextField" binding="skrivDinGissningHärTextField" default-binding="true">
+        <constraints>
+          <grid row="7" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="76a2c" class="javax.swing.JTextField" binding="skrivDinGissningNedanförTextField" default-binding="true">
+        <constraints>
+          <grid row="6" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <editable value="false"/>
+          <text value="Skriv din gissning nedanför:"/>
+        </properties>
+      </component>
+      <component id="e33b7" class="javax.swing.JTextField" binding="ledareTextField" default-binding="true">
+        <constraints>
+          <grid row="4" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <editable value="false"/>
+          <text value="Ledare:"/>
+        </properties>
+      </component>
+      <component id="587e8" class="javax.swing.JRadioButton" binding="fuskRadioButton" default-binding="true">
+        <constraints>
+          <grid row="8" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Fusk"/>
+        </properties>
+      </component>
+      <component id="6a8eb" class="javax.swing.JTextField" binding="rättsvar">
+        <constraints>
+          <grid row="8" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <editable value="false"/>
         </properties>
       </component>
     </children>
