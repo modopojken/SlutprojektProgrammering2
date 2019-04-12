@@ -36,7 +36,7 @@ public class hejsansvejsan {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.pack();
         frame.setSize(800, 600);
-        frame.setVisible(true);
+        frame.setVisible(false);
         exitButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
