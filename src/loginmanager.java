@@ -10,8 +10,10 @@ public class loginmanager {
     private JTextField loginBelowTextField;
     private JButton Loginbutton;
     JPanel loginsaken;
+    private JButton loginBelowButton;
     hejsansvejsan hs;
     loginmanager hk;
+    AdminManager ks;
     int blyat = 0;
     static JFrame frame;
 
@@ -42,6 +44,20 @@ public class loginmanager {
                 frame.setVisible(false);
             }
 
+        });
+
+        loginBelowButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if (ks == null) {
+                    ks = new AdminManager();
+                    ks.createAdminManager();
+                    blyat++;
+
+                }
+                ks.frame.setVisible(true);
+                frame.setVisible(false);
+            }
         });
     }
 }
