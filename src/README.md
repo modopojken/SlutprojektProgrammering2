@@ -6,3 +6,5 @@
  samt att programmet automatisk stänger ner sig efter visst många misslyckade försök.
 
 11-04-2019: Skapat Wiki i mitt git-repo. Skapat en loginsida där jag kan skriva in mina credentials osv. Har också kopplat den till "HejsanSvejsan"
+
+26-04-2019: Skapat en Admin sida där man ska kunna ladda upp ord till databasen som sedan ska kunna vändas som ord du spelar med. 
