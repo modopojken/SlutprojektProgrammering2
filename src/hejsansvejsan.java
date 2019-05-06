@@ -19,6 +19,7 @@ public class hejsansvejsan {
     private JTextField rättsvar;
 
     String rättord = "tre";
+
     int score = 0;
     int AntalPoängSomGes = 5;
     int rättirad;
@@ -27,6 +28,7 @@ public class hejsansvejsan {
 
     public static void main(String[] args) {
         hejsansvejsan hs = new hejsansvejsan();
+
     }
 
     public hejsansvejsan() {

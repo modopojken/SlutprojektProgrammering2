@@ -17,12 +17,20 @@ public class AdminManager {
     private JPanel adminsak;
     private JButton ExitButton;
     JFrame frame;
+    public int wordamount;
 
     public AdminManager() {
         ExitButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 System.exit(1);
+            }
+        });
+        addword.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+                wordamount++;
             }
         });
     }
