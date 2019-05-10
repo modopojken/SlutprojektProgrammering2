@@ -1,6 +1,10 @@
+import javax.sound.midi.SysexMessage;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.ComponentAdapter;
+import java.awt.event.ComponentEvent;
+import java.util.TimerTask;
 
 public class hejsansvejsan {
     private JButton exitButton;
@@ -17,8 +21,8 @@ public class hejsansvejsan {
     private JTextField ledareTextField;
     private JRadioButton fuskRadioButton;
     private JTextField rättsvar;
+    spel s;
 
-    String rättord = "tre";
 
     int score = 0;
     int AntalPoängSomGes = 5;
@@ -29,16 +33,22 @@ public class hejsansvejsan {
     public static void main(String[] args) {
         hejsansvejsan hs = new hejsansvejsan();
 
+
     }
 
     public hejsansvejsan() {
+
         System.out.println("starting");
+        s = new spel();
+        s.init();
         frame = new JFrame("hejsansvejsan");
         frame.setContentPane(this.fuskknapp);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.pack();
         frame.setSize(800, 600);
         frame.setVisible(false);
+        int secondPassed = 0;
+        double startTime = System.currentTimeMillis();
         exitButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -49,7 +59,7 @@ public class hejsansvejsan {
             @Override
             public void actionPerformed(ActionEvent e) {
                 String Guess = skrivDinGissningHärTextField.getText();
-                if(Guess.equals(rättord)){
+                if(Guess.equals(s.getWord())){
                     score ++;
                     String svar = Integer.toString(score);
                     dinaPoängTextField.setText(svar);
@@ -88,6 +98,23 @@ public class hejsansvejsan {
             @Override
             public void actionPerformed(ActionEvent e) {
                 //rättsvar
+            }
+        });
+        spelareSomÄrMedTextArea.addComponentListener(new ComponentAdapter() {
+            @Override
+            public void componentResized(ComponentEvent e) {
+                spelareSomÄrMedTextArea.setText("Endast du.");
+            }
+        });
+        härKommerLedtrådarnaTextArea.addComponentListener(new ComponentAdapter() {
+            @Override
+            public void componentResized(ComponentEvent e) {
+                härKommerLedtrådarnaTextArea.setText(s.getClue1());
+                if (System.currentTimeMillis()-startTime >= 5000){
+                    härKommerLedtrådarnaTextArea.setText("");
+                    härKommerLedtrådarnaTextArea.setText(s.getClue1() + "\n" + s.getClue2());
+                }
+
             }
         });
     }

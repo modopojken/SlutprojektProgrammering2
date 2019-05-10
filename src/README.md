@@ -8,3 +8,8 @@
 11-04-2019: Skapat Wiki i mitt git-repo. Skapat en loginsida där jag kan skriva in mina credentials osv. Har också kopplat den till "HejsanSvejsan"
 
 26-04-2019: Skapat en Admin sida där man ska kunna ladda upp ord till databasen som sedan ska kunna vändas som ord du spelar med. 
+
+03-05-2019: Fixade spel sidan så jag kan ta hem orden från databasen.
+
+10-05-2019: Skapat getters och setters så att jag kan hämta hem ord från databasen, flytta dem mellan klasser och sedan sätta in dem i projekten.
+Jag satte också in orden i "rätt ord" osv. 

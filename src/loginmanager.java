@@ -17,8 +17,6 @@ public class loginmanager {
     int blyat = 0;
     static JFrame frame;
 
-
-
     public static void main(String[] args) {
         frame = new JFrame("loginmanager");
         frame.setContentPane(new loginmanager().loginsaken);
@@ -26,7 +24,6 @@ public class loginmanager {
         frame.pack();
         frame.setSize(800, 600);
         frame.setVisible(true);
-
 
 
     }
