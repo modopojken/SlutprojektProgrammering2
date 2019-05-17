@@ -78,14 +78,14 @@ public class spel {
                 Statement ps = connection.createStatement();
                 //ResultSet rs = null;
                 //ps = ("SELECT `id`, `word`, `clue1`, `clue2`, `clue3`, `clue4`, `clue5`, `created_at`, `updated_at` FROM `words` WHERE 1");
-                ResultSet rs = ps.executeQuery("SELECT * FROM words WHERE id=1");
+                ResultSet rs = ps.executeQuery("SELECT * FROM words WHERE id=1");   //Hämtar häm från databasen
 
                 while (rs.next()) {
 
 
                     int id = rs.getInt("id");
                     word = rs.getString("word");
-                    clue1 = rs.getString("clue1");
+                    clue1 = rs.getString("clue1"); //Sätter hämtad clueX till clueX
                     clue2 = rs.getString("clue2");
                     clue3 = rs.getString("clue3");
                     clue4 = rs.getString("clue4");

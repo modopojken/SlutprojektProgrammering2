@@ -30,7 +30,8 @@ public class AdminManager {
             @Override
             public void actionPerformed(ActionEvent e) {
 
-                wordamount++;
+                wordamount++; //Knappen man skickar in fler ord med, samt lägger till en till i wordammount
+                                // Wordamount är hur många olika ord med ledgrådar som finns.
             }
         });
     }

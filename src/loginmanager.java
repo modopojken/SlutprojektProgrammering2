@@ -38,7 +38,7 @@ public class loginmanager {
 
                 }
                 hs.frame.setVisible(true);
-                frame.setVisible(false);
+                frame.setVisible(false); //Då du loggar in så göms "loginmanager" och "hejsansvejsan" visas
             }
 
         });
@@ -49,7 +49,7 @@ public class loginmanager {
                 if (ks == null) {
                     ks = new AdminManager();
                     ks.createAdminManager();
-                    blyat++;
+                    blyat++;                    //Här så göms loginmanager och adminmanager visas.
 
                 }
                 ks.frame.setVisible(true);

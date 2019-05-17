@@ -12,4 +12,6 @@
 03-05-2019: Fixade spel sidan så jag kan ta hem orden från databasen.
 
 10-05-2019: Skapat getters och setters så att jag kan hämta hem ord från databasen, flytta dem mellan klasser och sedan sätta in dem i projekten.
-Jag satte också in orden i "rätt ord" osv. 
+Jag satte också in orden i "rätt ord" osv.
+
+17-05-2019: Skriver documentation idag.

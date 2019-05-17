@@ -46,7 +46,7 @@ public class hejsansvejsan {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.pack();
         frame.setSize(800, 600);
-        frame.setVisible(false);
+        frame.setVisible(false);     //Hejsansvejsan är inte synlig från början för att man börjar på loginmanager och inte denna
         int secondPassed = 0;
         double startTime = System.currentTimeMillis();
         exitButton.addActionListener(new ActionListener() {
@@ -63,24 +63,24 @@ public class hejsansvejsan {
                     score ++;
                     String svar = Integer.toString(score);
                     dinaPoängTextField.setText(svar);
-                    System.out.println("rätt");
-                    skrivDinGissningHärTextField.setText("");
-                    felirad = 0;
-                    rättirad++;
+                    System.out.println("rätt"); //skriver ut rätt om du har rätt
+                    skrivDinGissningHärTextField.setText(""); //sätter textfieldet till blankt efter du submitar ditt svar
+                    felirad = 0; //Sätter felirad till 0 då du svarar rätt
+                    rättirad++;     //Räknar rätt i rad
                     rättFelTextField.setText("Rätt! " + "Du har haft rätt " + rättirad + " gånger i rad!");
                     AntalPoängSomGes = 5;
                 }else{
                     AntalPoängSomGes--;
-                    felirad++;
+                    felirad++; //räknar hur många gånger du har svarat fel i rad
                     String FelSvarPoäng = Integer.toString(AntalPoängSomGes);
                     antalPoängSomGesTextField.setText(FelSvarPoäng);
-                    skrivDinGissningHärTextField.setText("");
+                    skrivDinGissningHärTextField.setText(""); //tar bort det man skrev innan och gör raden blank
                     rättFelTextField.setText("Fel! " + "Du har haft fel " + felirad + " gånger i rad!");
                     if (AntalPoängSomGes <= 0){
 
                         JOptionPane.showMessageDialog(null, "Du gissade fel för många gånger i rad.");
                         System.out.println("Exiting");
-                        System.exit(1);
+                        System.exit(1);                 //Detta är det som sker när man svarar fel flera gånger i rad.
                     }
 
                 }
@@ -111,7 +111,7 @@ public class hejsansvejsan {
             public void componentResized(ComponentEvent e) {
                 härKommerLedtrådarnaTextArea.setText(s.getClue1());
                 if (System.currentTimeMillis()-startTime >= 5000){
-                    härKommerLedtrådarnaTextArea.setText("");
+                    härKommerLedtrådarnaTextArea.setText("");       //Misslyckat försök på timer
                     härKommerLedtrådarnaTextArea.setText(s.getClue1() + "\n" + s.getClue2());
                 }
 
