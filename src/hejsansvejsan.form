@@ -35,7 +35,7 @@
         <properties/>
         <border type="none"/>
         <children>
-          <component id="20f20" class="javax.swing.JTextArea" binding="härKommerLedtrådarnaTextArea" default-binding="true">
+          <component id="20f20" class="javax.swing.JTextArea" binding="härKommerLedtradarnaTextArea" default-binding="true">
             <constraints>
               <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
                 <preferred-size width="150" height="50"/>
@@ -48,7 +48,7 @@
           </component>
         </children>
       </grid>
-      <component id="5a569" class="javax.swing.JTextArea" binding="spelareSomÄrMedTextArea" default-binding="true">
+      <component id="5a569" class="javax.swing.JTextArea" binding="spelareSomarMedTextArea" default-binding="true">
         <constraints>
           <grid row="1" column="0" row-span="5" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="50"/>
@@ -59,7 +59,7 @@
           <text value="Spelare som är med:"/>
         </properties>
       </component>
-      <component id="dba4f" class="javax.swing.JTextField" binding="antalPoängSomGesTextField" default-binding="true">
+      <component id="dba4f" class="javax.swing.JTextField" binding="antalPoangSomGesTextField" default-binding="true">
         <constraints>
           <grid row="3" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="-1"/>
@@ -70,7 +70,7 @@
           <text value="5"/>
         </properties>
       </component>
-      <component id="1000c" class="javax.swing.JTextField" binding="dinaPoängTextField" default-binding="true">
+      <component id="1000c" class="javax.swing.JTextField" binding="dinaPoangTextField" default-binding="true">
         <constraints>
           <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="-1"/>
@@ -92,7 +92,7 @@
           <text value="Antal ledtrådar ute"/>
         </properties>
       </component>
-      <component id="3633e" class="javax.swing.JTextField" binding="rättFelTextField" default-binding="true">
+      <component id="3633e" class="javax.swing.JTextField" binding="rattFelTextField" default-binding="true">
         <constraints>
           <grid row="4" column="2" row-span="5" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="-1"/>
@@ -113,7 +113,7 @@
           <text value=""/>
         </properties>
       </component>
-      <component id="76a2c" class="javax.swing.JTextField" binding="skrivDinGissningNedanförTextField" default-binding="true">
+      <component id="76a2c" class="javax.swing.JTextField" binding="skrivDinGissningNedanforTextField" default-binding="true">
         <constraints>
           <grid row="6" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="-1"/>
@@ -143,7 +143,7 @@
           <text value="Fusk"/>
         </properties>
       </component>
-      <component id="6a8eb" class="javax.swing.JTextField" binding="rättsvar">
+      <component id="6a8eb" class="javax.swing.JTextField" binding="rattsvar">
         <constraints>
           <grid row="8" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="-1"/>

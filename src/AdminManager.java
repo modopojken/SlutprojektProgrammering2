@@ -15,7 +15,7 @@ public class AdminManager {
     private JTextField guessrclue4;
     private JTextField guessrclue5;
     private JButton addword;
-    private JTextField rättord;
+    private JTextField rattord;
     private JTextField cluesTextField;
     private JPanel adminsak;
     private JButton ExitButton;

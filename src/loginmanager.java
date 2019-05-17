@@ -2,6 +2,9 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+/**
+ * En klASS som loggar in. Skapar ett loggin GUI.
+ */
 public class loginmanager {
     private JTextField WriteUsernametextField;
     private JTextField WritePasswordtextField;
@@ -18,7 +21,7 @@ public class loginmanager {
     static JFrame frame;
 
     /**
-     *
+     * Här skapas GUIt
      * @param args
      */
     public static void main(String[] args) {
@@ -33,7 +36,7 @@ public class loginmanager {
     }
 
     /**
-     *
+     * Här har vi inloggnings listernersa
      */
     public loginmanager() {
         Loginbutton.addActionListener(new ActionListener() {

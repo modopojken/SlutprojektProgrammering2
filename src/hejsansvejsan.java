@@ -1,32 +1,33 @@
-import javax.sound.midi.SysexMessage;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.ComponentAdapter;
 import java.awt.event.ComponentEvent;
-import java.util.TimerTask;
 
+/**
+ * En klass som skapar spelet, här kommer vi se ledtrådar, skriva gissningar och se om vi hade rätt eller fel.
+ */
 public class hejsansvejsan {
     private JButton exitButton;
-    private JTextField skrivDinGissningHärTextField;
+    private JTextField skrivDinGissningHarTextField;
     private JTextField gissaOrdetTextField;
-    private JTextArea härKommerLedtrådarnaTextArea;
-    private JTextArea spelareSomÄrMedTextArea;
-    private JTextField antalPoängSomGesTextField;
-    private JTextField dinaPoängTextField;
-    private JTextField antalLedtrådarUteTextField;
-    private JTextField rättFelTextField;
+    private JTextArea härKommerLedtradarnaTextArea;
+    private JTextArea spelareSomarMedTextArea;
+    private JTextField antalPoangSomGesTextField;
+    private JTextField dinaPoangTextField;
+    private JTextField antalLedtradarUteTextField;
+    private JTextField rattFelTextField;
     private JPanel fuskknapp;
-    private JTextField skrivDinGissningNedanförTextField;
+    private JTextField skrivDinGissningNedanforTextField;
     private JTextField ledareTextField;
     private JRadioButton fuskRadioButton;
-    private JTextField rättsvar;
+    private JTextField rattsvar;
     spel s;
 
 
     int score = 0;
-    int AntalPoängSomGes = 5;
-    int rättirad;
+    int AntalPoangSomGes = 5;
+    int rattirad;
     int felirad;
     JFrame frame;
 
@@ -37,12 +38,9 @@ public class hejsansvejsan {
     }
 
     /**
-     *
+     * Denna skapar GUI interfacet.
      */
     public hejsansvejsan() {
-/**
- *
- */
         System.out.println("starting");
         s = new spel();
         s.init();
@@ -61,28 +59,28 @@ public class hejsansvejsan {
                 System.exit(0);
             }
         });
-        skrivDinGissningHärTextField.addActionListener(new ActionListener() {
+        skrivDinGissningHarTextField.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                String Guess = skrivDinGissningHärTextField.getText();
+                String Guess = skrivDinGissningHarTextField.getText();
                 if(Guess.equals(s.getWord())){
                     score ++;
                     String svar = Integer.toString(score);
-                    dinaPoängTextField.setText(svar);
+                    dinaPoangTextField.setText(svar);
                     System.out.println("rätt"); //skriver ut rätt om du har rätt
-                    skrivDinGissningHärTextField.setText(""); //sätter textfieldet till blankt efter du submitar ditt svar
+                    skrivDinGissningHarTextField.setText(""); //sätter textfieldet till blankt efter du submitar ditt svar
                     felirad = 0; //Sätter felirad till 0 då du svarar rätt
-                    rättirad++;     //Räknar rätt i rad
-                    rättFelTextField.setText("Rätt! " + "Du har haft rätt " + rättirad + " gånger i rad!");
-                    AntalPoängSomGes = 5;
+                    rattirad++;     //Räknar rätt i rad
+                    rattFelTextField.setText("Rätt! " + "Du har haft rätt " + rattirad + " gånger i rad!");
+                    AntalPoangSomGes = 5;
                 }else{
-                    AntalPoängSomGes--;
+                    AntalPoangSomGes--;
                     felirad++; //räknar hur många gånger du har svarat fel i rad
-                    String FelSvarPoäng = Integer.toString(AntalPoängSomGes);
-                    antalPoängSomGesTextField.setText(FelSvarPoäng);
-                    skrivDinGissningHärTextField.setText(""); //tar bort det man skrev innan och gör raden blank
-                    rättFelTextField.setText("Fel! " + "Du har haft fel " + felirad + " gånger i rad!");
-                    if (AntalPoängSomGes <= 0){
+                    String FelSvarPoäng = Integer.toString(AntalPoangSomGes);
+                    antalPoangSomGesTextField.setText(FelSvarPoäng);
+                    skrivDinGissningHarTextField.setText(""); //tar bort det man skrev innan och gör raden blank
+                    rattFelTextField.setText("Fel! " + "Du har haft fel " + felirad + " gånger i rad!");
+                    if (AntalPoangSomGes <= 0){
 
                         JOptionPane.showMessageDialog(null, "Du gissade fel för många gånger i rad.");
                         System.out.println("Exiting");
@@ -94,9 +92,9 @@ public class hejsansvejsan {
             }
         });
         /**
-         *
+         * Här har vi listersena till GUIn där vi spelar spelet.
          */
-        dinaPoängTextField.addActionListener(new ActionListener() {
+        dinaPoangTextField.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 int yourscore = 1;
@@ -106,32 +104,32 @@ public class hejsansvejsan {
         fuskRadioButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                //rättsvar
+                //rattsvar
             }
         });
-        spelareSomÄrMedTextArea.addComponentListener(new ComponentAdapter() {
+        spelareSomarMedTextArea.addComponentListener(new ComponentAdapter() {
             @Override
             public void componentResized(ComponentEvent e) {
-                spelareSomÄrMedTextArea.setText("Endast du.");
+                spelareSomarMedTextArea.setText("Endast du.");
             }
         });
-        härKommerLedtrådarnaTextArea.addComponentListener(new ComponentAdapter() {
+        härKommerLedtradarnaTextArea.addComponentListener(new ComponentAdapter() {
             @Override
             public void componentResized(ComponentEvent e) {
-                härKommerLedtrådarnaTextArea.setText(s.getClue1());
+                härKommerLedtradarnaTextArea.setText(s.getClue1());
                 if (System.currentTimeMillis()-startTime >= 5000){
-                    härKommerLedtrådarnaTextArea.setText("");       // Misslyckat försök på timer
-                    härKommerLedtrådarnaTextArea.setText(s.getClue1() + "\n" + s.getClue2());
+                    härKommerLedtradarnaTextArea.setText("");       // Misslyckat försök på timer
+                    härKommerLedtradarnaTextArea.setText(s.getClue1() + "\n" + s.getClue2());
                 }
 
             }
         });
-        härKommerLedtrådarnaTextArea.addComponentListener(new ComponentAdapter() {
+        härKommerLedtradarnaTextArea.addComponentListener(new ComponentAdapter() {
             @Override
             public void componentResized(ComponentEvent e) {
                 int ettTal = 1;
                 if (ettTal == 1){
-                    härKommerLedtrådarnaTextArea.setText(s.getClue1() + "\n" + s.getClue2() + "\n" + s.getClue3() + "\n" + s.getClue4() + "\n" + s.getClue5());
+                    härKommerLedtradarnaTextArea.setText(s.getClue1() + "\n" + s.getClue2() + "\n" + s.getClue3() + "\n" + s.getClue4() + "\n" + s.getClue5());
                     // Här displayar vi alla ledtrådar
                 }
             }
