@@ -17,6 +17,10 @@ public class loginmanager {
     int blyat = 0;
     static JFrame frame;
 
+    /**
+     *
+     * @param args
+     */
     public static void main(String[] args) {
         frame = new JFrame("loginmanager");
         frame.setContentPane(new loginmanager().loginsaken);
@@ -28,6 +32,9 @@ public class loginmanager {
 
     }
 
+    /**
+     *
+     */
     public loginmanager() {
         Loginbutton.addActionListener(new ActionListener() {
             @Override

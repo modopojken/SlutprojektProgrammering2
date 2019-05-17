@@ -19,6 +19,9 @@ public class AdminManager {
     JFrame frame;
     public int wordamount;
 
+    /**
+     *
+     */
     public AdminManager() {
         ExitButton.addActionListener(new ActionListener() {
             @Override
@@ -36,6 +39,10 @@ public class AdminManager {
         });
     }
 
+    /**
+     * Skapar admin manager GUIn
+     * @param args
+     */
     public static void main(String[] args) {
         JFrame frame = new JFrame("AdminManager");
         frame.setContentPane(new AdminManager().adminsak);
@@ -48,6 +55,10 @@ public class AdminManager {
             AdminManager ks = new AdminManager();
             ks.frame.setVisible(true);
         }*/
+
+    /**
+     *
+     */
    public void createAdminManager() {
         frame = new JFrame("AdminManager");
         frame.setContentPane(new AdminManager().adminsak);

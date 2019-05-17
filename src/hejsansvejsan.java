@@ -36,8 +36,13 @@ public class hejsansvejsan {
 
     }
 
+    /**
+     *
+     */
     public hejsansvejsan() {
-
+/**
+ *
+ */
         System.out.println("starting");
         s = new spel();
         s.init();
@@ -47,6 +52,7 @@ public class hejsansvejsan {
         frame.pack();
         frame.setSize(800, 600);
         frame.setVisible(false);     //Hejsansvejsan är inte synlig från början för att man börjar på loginmanager och inte denna
+
         int secondPassed = 0;
         double startTime = System.currentTimeMillis();
         exitButton.addActionListener(new ActionListener() {
@@ -87,6 +93,9 @@ public class hejsansvejsan {
 
             }
         });
+        /**
+         *
+         */
         dinaPoängTextField.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -111,10 +120,20 @@ public class hejsansvejsan {
             public void componentResized(ComponentEvent e) {
                 härKommerLedtrådarnaTextArea.setText(s.getClue1());
                 if (System.currentTimeMillis()-startTime >= 5000){
-                    härKommerLedtrådarnaTextArea.setText("");       //Misslyckat försök på timer
+                    härKommerLedtrådarnaTextArea.setText("");       // Misslyckat försök på timer
                     härKommerLedtrådarnaTextArea.setText(s.getClue1() + "\n" + s.getClue2());
                 }
 
+            }
+        });
+        härKommerLedtrådarnaTextArea.addComponentListener(new ComponentAdapter() {
+            @Override
+            public void componentResized(ComponentEvent e) {
+                int ettTal = 1;
+                if (ettTal == 1){
+                    härKommerLedtrådarnaTextArea.setText(s.getClue1() + "\n" + s.getClue2() + "\n" + s.getClue3() + "\n" + s.getClue4() + "\n" + s.getClue5());
+                    // Här displayar vi alla ledtrådar
+                }
             }
         });
     }

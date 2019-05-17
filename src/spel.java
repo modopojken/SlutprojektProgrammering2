@@ -8,7 +8,10 @@ import java.sql.*;
 
 
 public class spel {
-    //Härifrån ska jag hämta all statistik samt texter från databasen.
+    /**
+     * Härifrån ska jag hämta all statistik samt texter från databasen.
+     */
+
 
 
 
@@ -26,6 +29,10 @@ public class spel {
         private String clue4;
         private String clue5;
 
+    /**
+     * här kör vi getters och setters
+     * @return
+     */
         public String getWord(){
             return word;
         }
@@ -63,7 +70,12 @@ public class spel {
             this.clue5 = newClue5;
         }
 
-        public static void main(String[] args) {
+
+    /**
+     * Här har vi getters
+     * @param args
+     */
+    public static void main(String[] args) {
             spel s = new spel();
             s.init();
         }
@@ -85,7 +97,7 @@ public class spel {
 
                     int id = rs.getInt("id");
                     word = rs.getString("word");
-                    clue1 = rs.getString("clue1"); //Sätter hämtad clueX till clueX
+                    clue1 = rs.getString("clue1"); //Sätter nästa hämtad sak
                     clue2 = rs.getString("clue2");
                     clue3 = rs.getString("clue3");
                     clue4 = rs.getString("clue4");
