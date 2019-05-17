@@ -11,7 +11,7 @@ public class hejsansvejsan {
     private JButton exitButton;
     private JTextField skrivDinGissningHarTextField;
     private JTextField gissaOrdetTextField;
-    private JTextArea härKommerLedtradarnaTextArea;
+    private JTextArea harKommerLedtradarnaTextArea;
     private JTextArea spelareSomarMedTextArea;
     private JTextField antalPoangSomGesTextField;
     private JTextField dinaPoangTextField;
@@ -113,23 +113,23 @@ public class hejsansvejsan {
                 spelareSomarMedTextArea.setText("Endast du.");
             }
         });
-        härKommerLedtradarnaTextArea.addComponentListener(new ComponentAdapter() {
+        harKommerLedtradarnaTextArea.addComponentListener(new ComponentAdapter() {
             @Override
             public void componentResized(ComponentEvent e) {
-                härKommerLedtradarnaTextArea.setText(s.getClue1());
+                harKommerLedtradarnaTextArea.setText(s.getClue1());
                 if (System.currentTimeMillis()-startTime >= 5000){
-                    härKommerLedtradarnaTextArea.setText("");       // Misslyckat försök på timer
-                    härKommerLedtradarnaTextArea.setText(s.getClue1() + "\n" + s.getClue2());
+                    harKommerLedtradarnaTextArea.setText("");       // Misslyckat försök på timer
+                    harKommerLedtradarnaTextArea.setText(s.getClue1() + "\n" + s.getClue2());
                 }
 
             }
         });
-        härKommerLedtradarnaTextArea.addComponentListener(new ComponentAdapter() {
+        harKommerLedtradarnaTextArea.addComponentListener(new ComponentAdapter() {
             @Override
             public void componentResized(ComponentEvent e) {
                 int ettTal = 1;
                 if (ettTal == 1){
-                    härKommerLedtradarnaTextArea.setText(s.getClue1() + "\n" + s.getClue2() + "\n" + s.getClue3() + "\n" + s.getClue4() + "\n" + s.getClue5());
+                    harKommerLedtradarnaTextArea.setText(s.getClue1() + "\n" + s.getClue2() + "\n" + s.getClue3() + "\n" + s.getClue4() + "\n" + s.getClue5());
                     // Här displayar vi alla ledtrådar
                 }
             }
