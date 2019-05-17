@@ -2,6 +2,9 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+/**
+ * En klass som skapar admin managern där vi kommer kunna inserta ord till databasen (fast det funkar inte för jag hann inte så långt)
+ */
 public class AdminManager {
 
     private JTextField addWordsHereTextField;
@@ -20,7 +23,7 @@ public class AdminManager {
     public int wordamount;
 
     /**
-     *
+     * Dessa listners stänger ner programmet och plussar på wordamount.
      */
     public AdminManager() {
         ExitButton.addActionListener(new ActionListener() {
@@ -40,7 +43,7 @@ public class AdminManager {
     }
 
     /**
-     * Skapar admin manager GUIn
+     * Skapar admin manager GUIn där vi kan inserta ord till databasen i ord och clue fälten.
      * @param args
      */
     public static void main(String[] args) {
